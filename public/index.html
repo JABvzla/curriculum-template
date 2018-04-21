@@ -11,7 +11,9 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/animate.3.5.3.min.css">
+    <link rel="stylesheet" href="/css/normalize.8.0.0.min.css.css">
+    <link rel="stylesheet" href="/css/animate.3.5.3.min.css">
+    <link rel="stylesheet" href="/css/pacman-preloader.css">
 
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -28,6 +30,11 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+
+    <div id="preloader" class="animated">
+      <div class="lds-pacman"><div><div></div><div></div><div></div></div><div><div></div><div></div></div></div>
+    </div>
+
     <div id="root"></div>
     <!--
       This HTML file is a template.
