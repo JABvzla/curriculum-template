@@ -20,31 +20,33 @@ class Profile extends Component {
     const { classes } = this.props;
 
     return (
-      <Card className={classes.card}>
-        <CardContent className={classes.content}>
-          <CardMedia
-            className={classes.picture}
-            image="/profilepic.jpeg"
-            title="Jose Bonito"
-          />
-          <div className={classes.personalInfo}>
-            <Typography 
-              className={classes.title}
-              variant="headline" 
-              component="h2">
+      <div className={classes.main}>
+        <Card className={classes.card}>
+          <CardContent className={classes.content}>
+            <CardMedia
+              className={classes.picture}
+              image="/profilepic.jpeg"
+              title="Jose Bonito"
+            />
+            <div className={classes.personalInfo}>
+              <Typography 
+                className={classes.title}
+                variant="headline" 
+                component="h2">
               Información Personal
-            </Typography>
-            <Typography component="div">
-              <ul className={classes.listInfo}>
-                <li className={classes.info}><b>Nombre :</b> Jose Bonito</li>
-                <li className={classes.info}><b>Email :</b> joseantoniobonito@hotmail.com</li>
-                <li className={classes.info}><b>Telfono :</b> 04269064756</li>
-                <li className={classes.info}><b>Fecha de Nacimiento :</b> 20/08/1992</li>
-              </ul>
-            </Typography>
-          </div>
-        </CardContent>
-      </Card>
+              </Typography>
+              <Typography component="div">
+                <ul className={classes.listInfo}>
+                  <li className={classes.info}><b>Nombre :</b> Jose Bonito</li>
+                  <li className={classes.info}><b>Email :</b> joseantoniobonito@hotmail.com</li>
+                  <li className={classes.info}><b>Telfono :</b> 04269064756</li>
+                  <li className={classes.info}><b>Fecha de Nacimiento :</b> 20/08/1992</li>
+                </ul>
+              </Typography>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     );
   }
 }
@@ -54,6 +56,11 @@ Profile.propTypes = {
 };
 
 const styles = () => ({
+  main: {
+    display: "flex",
+    minWidth: "100%",
+    minHeight: "100vh",
+  },
   card: {
     margin: "auto",
     minWidth: 550,

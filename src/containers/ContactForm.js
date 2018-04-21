@@ -68,7 +68,7 @@ class ContactForm extends Component {
         .then(() => {
           swal("¡Tu mensaje fue enviado correctamente!",
             "Pronto nos pondremos en contacto ;)","success");
-        
+
           this.setState({
             "name": "",
             "email": "",
@@ -117,37 +117,39 @@ class ContactForm extends Component {
     const { classes } = this.props;
 
     return (
-      <Card className={classes.card}>
-        <CardHeader title="Formulario de Contacto"/>
-        <CardContent>
-          <form className={classes.form}>
+      <div className={classes.main}>
+        <Card className={classes.card}>
+          <CardHeader title="Formulario de Contacto"/>
+          <CardContent>
+            <form className={classes.form}>
 
-            <TextField label="Nombre" 
-              value={this.state.name}
-              onChange={this.onNameChange} 
-              error={!this.state.validName && this.state.name.length > 0} />
+              <TextField label="Nombre" 
+                value={this.state.name}
+                onChange={this.onNameChange} 
+                error={!this.state.validName && this.state.name.length > 0} />
             
-            <TextField label="Email" 
-              value={this.state.email}
-              onChange={this.onEmailChange} 
-              error={!this.state.validEmail && this.state.email.length > 0} />
+              <TextField label="Email" 
+                value={this.state.email}
+                onChange={this.onEmailChange} 
+                error={!this.state.validEmail && this.state.email.length > 0} />
 
-            <TextField label="Mensaje" 
-              value={this.state.message}
-              onChange={this.onMessageChange} 
-              multiline rows="4" />
+              <TextField label="Mensaje" 
+                value={this.state.message}
+                onChange={this.onMessageChange} 
+                multiline rows="4" />
 
-            <Button 
-              onClick={this.sendContactEmail}
-              disabled={!this.state.validName || !this.state.validEmail}
-              variant="raised" 
-              color="primary" 
-              className={classes.button}>
+              <Button 
+                onClick={this.sendContactEmail}
+                disabled={!this.state.validName || !this.state.validEmail}
+                variant="raised" 
+                color="primary" 
+                className={classes.button}>
               Enviar
-            </Button>
-          </form>
-        </CardContent>
-      </Card>
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
+      </div>
     );
   }
 }
@@ -157,9 +159,15 @@ ContactForm.propTypes = {
 };
 
 const styles = () => ({
+  main: {
+    display: "flex",
+    minWidth: "100%",
+    minHeight: "100vh",
+  },
   card: {
     margin: "auto",
     position:"relative",
+    minWidth: 500,
     maxWidth: 600
   },
   form: {

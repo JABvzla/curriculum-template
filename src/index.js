@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import "typeface-roboto";
 
 // Bool to verify if window.onload is called.
 let windowLoaded = false;

@@ -11,6 +11,11 @@ import { withRouter } from "react-router";
  */
 class MenuButton extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = { "isHover" : false};
+  }
+
   /**
    * Redirect to route property.
    * <br/>
@@ -29,18 +34,27 @@ class MenuButton extends Component {
   render() {
     const { text, icon, showText } = this.props;
 
-    const buttonStyle = { 
+    const buttonStyle = {
       display: "flex",
       flexDirection: "column",
       alignContent: "center",
       justifyContent: "center",
+      padding: showText? "12px 0px" : "1em",
+      borderBottom: this.state.isHover? "3px solid #486273" : "3px solid transparent",
     };
+
     const centerStyle = { margin: "auto" };
 
     return ([
-      <ListItem button style={buttonStyle} key={0} onClick={this.onClickButton.bind(this)}>
+      <ListItem
+        key={0}
+        button style={buttonStyle}
+        onClick={this.onClickButton.bind(this)}
+        onMouseEnter={() => this.setState({"isHover" : true})}
+        onMouseLeave={() => this.setState({"isHover" : false})}
+      >
         <Icon color="primary" style={centerStyle}>{icon}</Icon>
-        {showText?<ListItemText primary={text} /> : null}             
+        {showText?<ListItemText primary={text} /> : null}
       </ListItem>,
       <Divider key={1}/>
     ]);

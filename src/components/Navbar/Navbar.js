@@ -22,7 +22,7 @@ class Navbar extends Component {
    * @returns {XML} The view to render, never null.
    */
   render() {
-    const { classes, open, onToggleMenu} = this.props;
+    const { classes, open, onToggleMenu, onToggleLight} = this.props;
     return (
       <Drawer 
         variant="permanent"
@@ -55,6 +55,12 @@ class Navbar extends Component {
           <CardActions className={classes.nonPadding}>
           </CardActions>
         </Card>
+        <IconButton
+          onClick={onToggleLight}
+          size="small"
+          className={classes.sizeButton}>
+          <Icon>lightbulb_outline</Icon>
+        </IconButton>
       </Drawer>
     );
   }
@@ -63,13 +69,15 @@ class Navbar extends Component {
 Navbar.propTypes = {
   classes: PropTypes.object.isRequired,
   open: PropTypes.bool.isRequired,
-  onToggleMenu: PropTypes.func.isRequired
+  onToggleMenu: PropTypes.func.isRequired,
+  onToggleLight: PropTypes.func.isRequired,
 };
 
 const styles = theme => ({
   drawerPaper: {
     width: theme.spacing.unit * 26,
     overflowX: "hidden",
+    backgroundColor: theme.background.color,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { VerticalTimeline, VerticalTimelineElement }  from "react-vertical-timeline-component";
-import {TimeLineInfo} from "./TimeLineInfo";
-import "react-vertical-timeline-component/style.min.css";
+import { TimeLineInfo } from "./TimeLineInfo";
+import "./style.min.css";
+import Typography from "material-ui/Typography";
+import Icon from "material-ui/Icon";
 
 /**
  * write component description..
@@ -19,21 +21,21 @@ class TimeLine extends Component {
       <div style={{
         maxHeight: "100%",
         maxWidth: "100%",
-        overflowY: "scroll",
-        marginLeft: "auto",
-        backgroundColor: "rgba(68, 68, 68, 0.29)"
+        overflow: "hidden"
       }}>
         <VerticalTimeline>
           {TimeLineInfo.map((element,key) =>
             <VerticalTimelineElement
               key={key}
-              className="vertical-timeline-element--work"
               date={element.date}
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              iconStyle={{ backgroundColor: element.bgColor, display: "flex"}}
+              icon={<Icon color="primary" style={{ margin: "auto", color: element.color}}>{element.icon}</Icon>}
             >
-              <h3 className="vertical-timeline-element-title">{element.title}</h3>
-              <h4 className="vertical-timeline-element-subtitle">{element.subtitle}</h4>
-              <p>{element.description}</p>      
+              <Typography  variant="title" gutterBottom >{element.title}</Typography>
+              <Typography  variant="subheading" gutterBottom >{element.subtitle}</Typography>
+              <Typography variant="body1" gutterBottom align="justify">
+                {element.description}
+              </Typography>
             </VerticalTimelineElement>
           )}
         </VerticalTimeline>

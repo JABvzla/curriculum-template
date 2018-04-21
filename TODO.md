@@ -4,21 +4,23 @@
     -Reponsive hide.
 ####Home
     -Take picture.
-    -Center TextSection.
     -Set button shadow.
 ####Profile
     -Copy from about.
 ####TimeLine:
     -Update Info: Add description.
     -Add icons.
-    -Update colors.
-
 ###Others
-    -Set fonts color.
-    -Set principal colors.
-    -Set secondary colors.
+    xSet fonts color.
+    xSet principal colors.
+    xSet secondary colors.
 ###Notes
 ```
 :( u know what i mean
 http://reva.bouthythemes.com/home-2.html#home-cont
+
+Palete color: 
+    #ffffcb
+    #fac090
+    #303e49
 ```

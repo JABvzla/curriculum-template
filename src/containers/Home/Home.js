@@ -28,7 +28,7 @@ class Home extends Component {
     return (
       <div className={classes.home}>
         <div className={classes.leftSide}>
-          <div className={classes.textSection}>
+          <div>
             <Typography variant="display3" >
               <b>Jose</b> Bonito
             </Typography>
@@ -78,15 +78,18 @@ const styles = theme => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    paddingLeft:theme.spacing.unit * 3,
+    alignItems: "center",
     width: "50%",
+    minWidth: 300,
     marginLeft: 0,
+    backgroundColor: theme.background.color,
 
     [theme.breakpoints.down("sm")]: {
       position: "absolute",
       zIndex: 999,
       height: "100vh",
       marginLeft: 0,
+      backgroundColor: "transparent",
     },
   },
   contactButton: {
@@ -115,6 +118,7 @@ const styles = theme => ({
     height: 0,
     borderBottom: "100vh solid transparent",
     borderLeft: "3vh solid #fff",
+    borderLeftColor: theme.background.color,
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -127,6 +131,7 @@ const styles = theme => ({
     height: 0,
     borderTop: "3vh solid transparent",
     borderLeft: "100vh solid #fff",
+    borderLeftColor: theme.background.color,
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
