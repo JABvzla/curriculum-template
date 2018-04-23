@@ -5,7 +5,6 @@ import { withStyles } from "material-ui/styles";
 import Card, { CardContent, CardMedia } from "material-ui/Card";
 import Typography from "material-ui/Typography";
 
-
 /**
  * Component to show Profile information.
  */
@@ -21,6 +20,7 @@ class Profile extends Component {
 
     return (
       <div className={classes.main}>
+
         <Card className={classes.card}>
           <CardContent className={classes.content}>
             <CardMedia

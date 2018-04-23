@@ -29,7 +29,7 @@ class Home extends Component {
       <div className={classes.home}>
         <div className={classes.leftSide}>
           <div>
-            <Typography variant="display3" >
+            <Typography variant="display3" className={classes.title} >
               <b>Jose</b> Bonito
             </Typography>
             <Typography variant="headline" className={classes.typing}>
@@ -92,18 +92,21 @@ const styles = theme => ({
       backgroundColor: "transparent",
     },
   },
+  title:{
+    textShadow: "1px 1px 1px #333,1px 1px 1px #333,1px 1px 1px #333"
+  },
   contactButton: {
     marginTop: 18,
   },
   typing : {
-    minHeight : 32
-
+    minHeight : 32,
+    textShadow: "1px 1px 1px #333,1px 1px 1px #333,1px 1px 1px #333"
   },
   rightSide: {
     position: "relative",
     width: "50%",
     marginRight: 0,
-    backgroundImage: "url('IMG_20170716_191047.jpg')",
+    backgroundImage: "url('home2.jpg')",
     backgroundSize: "cover",
     [theme.breakpoints.down("sm")]: {
       width: "100%",

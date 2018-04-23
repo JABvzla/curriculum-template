@@ -4,7 +4,6 @@
     -Reponsive hide.
 ####Home
     -Take picture.
-    -Set button shadow.
 ####Profile
     -Copy from about.
 ####TimeLine:
