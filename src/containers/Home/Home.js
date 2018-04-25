@@ -55,6 +55,7 @@ class Home extends Component {
         </div>
         <div className={classes.rightSide}>
           <div className={classes.diagonal}></div>
+          <div className={classes.diagonalRight}></div>
           <div className={classes.bottom}></div>
 
         </div>
@@ -115,13 +116,26 @@ const styles = theme => ({
   },
   diagonal : {
     position: "absolute",
-    left: 0,
+    left: -1,
     top: 0,
     width: 0,
     height: 0,
     borderBottom: "100vh solid transparent",
-    borderLeft: "3vh solid #fff",
+    borderLeft: "3vw solid #fff",
     borderLeftColor: theme.background.color,
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  diagonalRight : {
+    position: "absolute",
+    right: -1,
+    top: 0,
+    width: 0,
+    height: 0,
+    borderTop: "100vh solid transparent",
+    borderRight: "4vw solid #fff",
+    borderRightColor: theme.background.color,
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -129,11 +143,11 @@ const styles = theme => ({
   bottom : {
     position: "absolute",
     left: 0,
-    bottom: 0,
+    bottom: -1,
     width: 0,
     height: 0,
     borderTop: "3vh solid transparent",
-    borderLeft: "100vh solid #fff",
+    borderLeft: "100vw solid #fff",
     borderLeftColor: theme.background.color,
     [theme.breakpoints.down("sm")]: {
       display: "none",
