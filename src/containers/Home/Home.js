@@ -30,7 +30,7 @@ class Home extends Component {
         <div className={classes.leftSide}>
           <div>
             <Typography variant="display3" className={classes.title} >
-              <b>Jose</b> Bonito
+              <b className={classes.blackTitle}>Jose</b> Bonito
             </Typography>
             <Typography variant="headline" className={classes.typing}>
               <TypistLoop>
@@ -94,14 +94,19 @@ const styles = theme => ({
     },
   },
   title:{
-    textShadow: "1px 1px 1px #333,1px 1px 1px #333,1px 1px 1px #333"
+    textShadow: "1px 1px 1px #333,1px 1px 1px #333,1px 1px 1px #333",
+    color: "#fff"
+  },
+  blackTitle: {
+    color: theme.palette.primary.main,
   },
   contactButton: {
     marginTop: 18,
   },
   typing : {
     minHeight : 32,
-    textShadow: "1px 1px 1px #333,1px 1px 1px #333,1px 1px 1px #333"
+    textShadow: "1px 1px 1px #000,1px 1px 1px #000,1px 1px 1px #000",
+    color: "#000"
   },
   rightSide: {
     position: "relative",
