@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "material-ui/styles";
+import withWidth from "material-ui/utils/withWidth";
+import { compose } from "recompose";
 import classNames from "classnames";
 import Drawer from "material-ui/Drawer";
 import Card, { CardContent, CardActions } from "material-ui/Card";
@@ -9,6 +11,7 @@ import List from "material-ui/List";
 import IconButton from "material-ui/IconButton";
 import Icon from "material-ui/Icon";
 import MenuRoutes from "../../MenuRoutes";
+
 
 /**
  * Lateral Navbar component.
@@ -22,31 +25,35 @@ class Navbar extends Component {
    * @returns {XML} The view to render, never null.
    */
   render() {
-    const { classes, open, onToggleMenu, onToggleLight} = this.props;
+    const { classes, open, onToggleMenu, onToggleLight, width} = this.props;
+    const xs = (width === "xs");
+
     return (
-      <Drawer 
+      <Drawer
         variant="permanent"
-        anchor="left"
+        anchor={xs? "bottom" : "left"}
         classes={{
           paper:  classNames(classes.drawerPaper, !open && classes.drawerPaperClose),
         }}>
-        <IconButton 
-          onClick={onToggleMenu}
-          size="small" 
-          className={classes.sizeButton}>
-          <Icon>
-            {open? "chevron_left":"chevron_right"}
-          </Icon>
-        </IconButton>
+        {!xs?
+          <IconButton
+            onClick={onToggleMenu}
+            size="small"
+            className={classes.sizeButton}>
+            <Icon>
+              {open? "chevron_left":"chevron_right"}
+            </Icon>
+          </IconButton>
+          : null}
         <Card className={classes.card}>
           <CardContent className={classes.nonPadding}>
-            <List component="nav" className={classes.nonPadding}>
+            <List component="nav" className={classes.list}>
               {MenuRoutes.map((element,key) =>
                 <MenuButton
                   key={key}
                   text={element.text}
                   icon={element.icon}
-                  showText={open}
+                  showText={xs? false : open}
                   route={element.route}
                 />
               )}
@@ -55,18 +62,21 @@ class Navbar extends Component {
           <CardActions className={classes.nonPadding}>
           </CardActions>
         </Card>
-        <IconButton
-          onClick={onToggleLight}
-          size="small"
-          className={classes.sizeButton}>
-          <Icon>lightbulb_outline</Icon>
-        </IconButton>
+        {!xs?
+          <IconButton
+            onClick={onToggleLight}
+            size="small"
+            className={classes.sizeButton}>
+            <Icon>lightbulb_outline</Icon>
+          </IconButton>
+          : null}
       </Drawer>
     );
   }
 }
 
 Navbar.propTypes = {
+  width: PropTypes.string.isRequired,
   classes: PropTypes.object.isRequired,
   open: PropTypes.bool.isRequired,
   onToggleMenu: PropTypes.func.isRequired,
@@ -75,6 +85,10 @@ Navbar.propTypes = {
 
 const styles = theme => ({
   drawerPaper: {
+    [theme.breakpoints.down("xs")]: {
+      width: "100vw",
+      position: "fixed",
+    },
     width: theme.spacing.unit * 26,
     overflowX: "hidden",
     backgroundColor: theme.background.color,
@@ -95,14 +109,31 @@ const styles = theme => ({
     marginTop: 5,
     marginRight: 5,
     marginLeft:"auto",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 0,
+      marginRight: 0,
+    }
   },
   card: {
     margin: "auto",
+    [theme.breakpoints.down("xs")]: {
+      margin: 0
+    }
+
   },
   nonPadding: {
     padding: 0,
+  },
+  list: {
+    padding: 0,
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+      display: "flex",
+      justifyContent: "center"
+
+    },
   }
 });
 
 
-export default withStyles(styles)(Navbar);
+export default compose(withStyles(styles), withWidth())(Navbar);

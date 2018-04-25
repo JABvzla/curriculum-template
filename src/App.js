@@ -113,7 +113,6 @@ class App extends Component {
 
   /**
    * Renders the view.
-   *rgb(68, 82, 93);
    * @returns {XML} The view to render, never null.
    */
   render() {
@@ -150,9 +149,15 @@ const styles = theme => ({
   content: {
     minHeight: "100vh",
     marginLeft: theme.spacing.unit * 26,
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: 0,
+    },
   },
   menuClosed: {
     marginLeft: theme.spacing.unit * 12,
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: 0,
+    },
   }
 });
 
