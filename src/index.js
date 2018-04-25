@@ -16,7 +16,8 @@ let homeImage = new Image();
 homeImage.src = "IMG_20170716_191047.jpg";
 
 // Remove scrollbar while site is loading.
-document.getElementsByTagName("body")[0].style.overflow = "hidden";
+document.getElementsByTagName("body")[0].classList.add("not-scroll");
+document.getElementsByTagName("html")[0].classList.add("not-scroll");
 
 /**
  * The onload callback is triggered when home image is loaded.
@@ -42,7 +43,8 @@ window.onload = () => {
  */
 function preloaderEnd() {
   if(homeImageLoaded && windowLoaded){
-    document.getElementsByTagName("body")[0].style.overflow = "inherit";
+    document.getElementsByTagName("html")[0].classList.remove("not-scroll");
+    document.getElementsByTagName("body")[0].classList.remove("not-scroll");
     document.getElementById("preloader").classList.add("fadeOut");
     setTimeout( () => {
       document.getElementById("preloader").style.display = "none";

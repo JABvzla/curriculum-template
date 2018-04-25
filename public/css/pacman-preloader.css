@@ -144,3 +144,4 @@
     -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
     transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
 }
+.not-scroll {margin: 0; height: 100%; overflow: hidden}
