@@ -1,7 +1,5 @@
 ##List of `To Do`!
 
-####NavBar
-    -Reponsive hide.
 ####Home
     -Take picture.
 ####Profile

@@ -7,9 +7,11 @@ import classNames from "classnames";
 import MenuRoutes from "./MenuRoutes";
 import {Animated} from "react-animated-css";
 import createHistory from "history/createBrowserHistory";
+import { compose } from "recompose";
 
 // Import Components
 import Navbar from "./components/Navbar";
+import withWidth from "material-ui/utils/withWidth";
 
 /**
  * Component main from application.
@@ -23,8 +25,9 @@ class App extends Component {
    */
   constructor(props) {
     super(props);
+
     this.state = {
-      "open" : true,
+      "open" : props.width !== "sm",
       "showMain" :  true,
       "navigate" : false,
       "light" : true,
@@ -118,6 +121,7 @@ class App extends Component {
   render() {
     const { classes } = this.props;
 
+
     return (
       <Router history={this.history}>
         <div style={{ backgroundColor: this.state.light? "#FAFAFA" : "#486273" }}>
@@ -142,6 +146,7 @@ class App extends Component {
 }
 
 App.propTypes = {
+  width: PropTypes.string.isRequired,
   classes: PropTypes.object
 };
 
@@ -161,5 +166,4 @@ const styles = theme => ({
   }
 });
 
-
-export default withStyles(styles)(App);
+export default compose(withStyles(styles), withWidth())(App);
