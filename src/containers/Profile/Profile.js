@@ -83,17 +83,26 @@ Profile.propTypes = {
   classes: PropTypes.object
 };
 
-const styles = () => ({
+const styles = theme => ({
   main: {
     minWidth: "100%",
     minHeight: "100vh",
-    paddingTop: 50,
+    [theme.breakpoints.up("sm")]: {
+      padding: 30,
+    },
   },
   card: {
     margin: "auto",
-    minWidth: "90%",
-    maxWidth: "90%",
     minHeight: 500,
+    marginBottom: 30,
+    [theme.breakpoints.up("md")]: {
+      minWidth: "90%",
+      maxWidth: "90%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      minWidth: 0,
+      maxWidth: 1000,
+    },
   },
   content: {
     padding: 0
