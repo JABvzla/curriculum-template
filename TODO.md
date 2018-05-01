@@ -3,7 +3,9 @@
 ####Home
     -Take Better picture.
 ####Profile
-    -Copy from about.
+    - Update Info: Add about.
+    - Text to About
+    - Fix image responsive
 ####TimeLine:
     -Update Info: Add description.
 ###Notes

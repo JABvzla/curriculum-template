@@ -38,7 +38,6 @@ class App extends Component {
     this.onToggleLight = this.onToggleLight.bind(this);
     this.onNavigate();
   }
-
   /**
    * Toggle size of menu.
    */
@@ -56,9 +55,9 @@ class App extends Component {
     this.history.block((location, action) => {
       if(action === "PUSH" && this.history.location.pathname !== location.pathname) {
         this.setState({ "showMain": false });
-
         setTimeout(() => {
           this.setState({ "navigate" : true, "showMain" : true});
+          this.history.location.pathname = location.pathname;
           this.history.push(location.pathname);
           this.setState({ "navigate" : false});
         }, 800);
@@ -67,6 +66,11 @@ class App extends Component {
     });
   }
 
+  /**
+   * Create and return MuiTheme.
+   *
+   * @returns {Theme} using on app.
+   */
   getTheme() {
     const color1 = "#fff";
     const color2 = "#303e49";

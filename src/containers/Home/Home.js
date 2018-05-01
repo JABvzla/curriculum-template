@@ -54,9 +54,9 @@ class Home extends Component {
           </div>
         </div>
         <div className={classes.rightSide}>
-          <div className={classes.diagonal}></div>
-          <div className={classes.diagonalRight}></div>
-          <div className={classes.bottom}></div>
+          <div className={classes.diagonal}> </div>
+          <div className={classes.diagonalRight}> </div>
+          <div className={classes.bottom}> </div>
 
         </div>
       </div>

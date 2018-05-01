@@ -13,7 +13,7 @@ let homeImageLoaded = false;
 let homeImage = new Image();
 
 // Load the home image.
-homeImage.src = "IMG_20170716_191047.jpg";
+homeImage.src = "home2.jpg";
 
 // Remove scrollbar while site is loading.
 document.getElementsByTagName("body")[0].classList.add("not-scroll");
