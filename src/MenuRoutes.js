@@ -1,7 +1,7 @@
 //Containers
 import Home  from "./containers/Home";
 import Profile  from "./containers/Profile";
-import TimeLine  from "./containers/TimeLine/TimeLine";
+import TimeLine  from "./containers/TimeLine";
 import ContactForm  from "./containers/ContactForm";
 
 
