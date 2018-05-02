@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import { ListItem, ListItemText } from "material-ui/List";
 import Divider from "material-ui/Divider";
 import Icon from "material-ui/Icon";
+import { compose } from "recompose";
 import { withRouter } from "react-router";
-
+import { withTheme } from "material-ui/styles";
 
 /**
  * Menu button to show in NavBar menu.
@@ -40,7 +41,7 @@ class MenuButton extends Component {
       alignContent: "center",
       justifyContent: "center",
       padding: showText? "12px 0px" : "1em",
-      borderBottom: this.state.isHover? "3px solid #486273" : "3px solid transparent",
+      borderBottom: this.state.isHover? "3px solid " + this.props.theme.palette.secondary.main : "3px solid transparent",
     };
 
     const centerStyle = { margin: "auto" };
@@ -61,6 +62,7 @@ class MenuButton extends Component {
   }
 }
 MenuButton.propTypes = {
+  theme: PropTypes.object.isRequired,
   text: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   showText: PropTypes.bool.isRequired,
@@ -69,4 +71,4 @@ MenuButton.propTypes = {
 };
 
 
-export default withRouter(MenuButton);
+export default compose(withTheme())(withRouter(MenuButton) );

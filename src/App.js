@@ -77,6 +77,9 @@ class App extends Component {
     const primary = this.state.light? color1 : color2;
     const primaryInvert = !this.state.light? color1 : color2;
 
+    const secondary = "#ffa100";
+    // const secondaryAlpha = "rgba(255,150,0,.2)";
+
     return createMuiTheme({
       palette: {
         type: this.state.light? "light" : "dark",
@@ -87,10 +90,10 @@ class App extends Component {
           contrastText: primary,
         },
         secondary: {
-          light: "#ffa100",
-          main: "#ffa100",
-          dark: "#ffa100",
-          contrastText: "#ffa100",
+          light: secondary,
+          main: secondary,
+          dark: secondary,
+          contrastText: secondary,
         },
       },
       background : {
