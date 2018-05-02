@@ -25,7 +25,7 @@ class Navbar extends Component {
    * @returns {XML} The view to render, never null.
    */
   render() {
-    const { classes, open, onToggleMenu, onToggleLight, width} = this.props;
+    const { classes, open, onToggleMenu, onToggleLight, width, location} = this.props;
     const xs = (width === "xs");
 
     return (
@@ -54,6 +54,7 @@ class Navbar extends Component {
                   text={element.text}
                   icon={element.icon}
                   showText={xs? false : open}
+                  active={element.route===location}
                   route={element.route}
                 />
               )}
@@ -81,6 +82,7 @@ Navbar.propTypes = {
   open: PropTypes.bool.isRequired,
   onToggleMenu: PropTypes.func.isRequired,
   onToggleLight: PropTypes.func.isRequired,
+  location: PropTypes.string
 };
 
 const styles = theme => ({

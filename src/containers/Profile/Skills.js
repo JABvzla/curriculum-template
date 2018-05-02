@@ -2,8 +2,16 @@ import React, { Component } from "react";
 import TabContent from "./TabContent";
 import SkillBar from "../../components/SkillBar";
 
+/**
+ * Component to show tab Skills content.
+ */
 class Skills extends Component {
 
+  /**
+   * Renders the view.
+   *
+   * @returns {XML} The view to render, never null.
+   */
   render() {
     return (
       <TabContent title="Habilidades">

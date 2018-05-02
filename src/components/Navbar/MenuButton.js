@@ -41,7 +41,7 @@ class MenuButton extends Component {
       alignContent: "center",
       justifyContent: "center",
       padding: showText? "12px 0px" : "1em",
-      borderBottom: this.state.isHover? "3px solid " + this.props.theme.palette.secondary.main : "3px solid transparent",
+      borderBottom: (this.state.isHover || this.props.active)? "3px solid " + this.props.theme.palette.secondary.main : "3px solid transparent",
     };
 
     const centerStyle = { margin: "auto" };
@@ -68,6 +68,7 @@ MenuButton.propTypes = {
   showText: PropTypes.bool.isRequired,
   route: PropTypes.string.isRequired,
   history: PropTypes.object.isRequired,
+  active: PropTypes.bool
 };
 
 

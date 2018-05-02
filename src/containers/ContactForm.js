@@ -125,7 +125,7 @@ class ContactForm extends Component {
 
               <TextField label="Nombre" 
                 value={this.state.name}
-                onChange={this.onNameChange} 
+                onChange={this.onNameChange}
                 error={!this.state.validName && this.state.name.length > 0} />
             
               <TextField label="Email" 

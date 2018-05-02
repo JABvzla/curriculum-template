@@ -116,6 +116,13 @@ class App extends Component {
             overflow: "hidden",
           }
         },
+        MuiInput:{
+          underline:{
+            "&:after": {
+              backgroundColor: secondary,
+            },
+          }
+        }
       }
     });
   }
@@ -142,6 +149,7 @@ class App extends Component {
             <Navbar onToggleMenu={this.onToggleMenu}
               onToggleLight={this.onToggleLight}
               open={this.state.open}
+              location={this.history.location.pathname}
             />
 
             <Animated animationIn="bounceInUp" animationOut="bounceOutDown" isVisible={this.state.showMain}>

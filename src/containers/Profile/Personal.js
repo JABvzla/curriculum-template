@@ -3,8 +3,16 @@ import PropTypes from "prop-types";
 import {withStyles} from "material-ui/styles/index";
 import TabContent from "./TabContent";
 
+/**
+ * Component to show tab Personal content.
+ */
 class Personal extends Component {
 
+  /**
+   * Renders the view.
+   *
+   * @returns {XML} The view to render, never null.
+   */
   render() {
     const { classes } = this.props;
 

@@ -1,8 +1,16 @@
 import React, { Component } from "react";
 import TabContent from "./TabContent";
 
+/**
+ * Component to show tab About content.
+ */
 class About extends Component {
 
+  /**
+   * Renders the view.
+   *
+   * @returns {XML} The view to render, never null.
+   */
   render() {
     return (
       <TabContent title="Acerca de mi">
