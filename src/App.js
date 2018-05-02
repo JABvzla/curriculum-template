@@ -85,7 +85,13 @@ class App extends Component {
           main: primaryInvert,
           dark: primaryInvert,
           contrastText: primary,
-        }
+        },
+        secondary: {
+          light: "#ffa100",
+          main: "#ffa100",
+          dark: "#ffa100",
+          contrastText: "#ffa100",
+        },
       },
       background : {
         color: primary,

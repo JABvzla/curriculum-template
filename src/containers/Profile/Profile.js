@@ -64,8 +64,8 @@ class Profile extends Component {
             />
             <div>
               <Tabs value={this.state.tabSelected}
-                classes={{ indicator: classes.tabsIndicator }}
-                onChange={this.onTabChange}  fullWidth>
+                textColor="primary"
+                onChange={this.onTabChange}  fullWidth centered>
                 <Tab label="Acerca de mi" />
                 <Tab label="Personal" />
                 <Tab label="Habilidades" />
@@ -85,7 +85,6 @@ Profile.propTypes = {
 
 const styles = theme => ({
   main: {
-    minWidth: "100%",
     minHeight: "100vh",
     [theme.breakpoints.up("sm")]: {
       padding: 30,
