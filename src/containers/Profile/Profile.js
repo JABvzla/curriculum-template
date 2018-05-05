@@ -81,7 +81,6 @@ Profile.propTypes = {
 
 const styles = theme => ({
   main: {
-    minHeight: "100vh",
     [theme.breakpoints.up("sm")]: {
       padding: 30,
     },
@@ -89,6 +88,7 @@ const styles = theme => ({
   card: {
     margin: "auto",
     minHeight: 500,
+    minWidth: 544,
     marginBottom: 30,
     [theme.breakpoints.up("md")]: {
       minWidth: "90%",

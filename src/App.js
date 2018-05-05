@@ -5,7 +5,7 @@ import { withStyles } from "material-ui/styles/index";
 import { createMuiTheme, MuiThemeProvider } from "material-ui/styles";
 import classNames from "classnames";
 import MenuRoutes from "./MenuRoutes";
-import {Animated} from "react-animated-css";
+import { Animated } from "react-animated-css";
 import createHistory from "history/createBrowserHistory";
 import { compose } from "recompose";
 
@@ -56,6 +56,7 @@ class App extends Component {
       if(action === "PUSH" && this.history.location.pathname !== location.pathname) {
         this.setState({ "showMain": false });
         setTimeout(() => {
+          window.scrollTo(0,0);
           this.setState({ "navigate" : true, "showMain" : true});
           this.history.location.pathname = location.pathname;
           this.history.push(location.pathname);
@@ -144,7 +145,7 @@ class App extends Component {
 
     return (
       <Router history={this.history}>
-        <div style={{ backgroundColor: this.state.light? "#FAFAFA" : "#486273" }}>
+        <div style={{ backgroundColor: this.state.light? "#FAFAFA" : "#486273", overflow: "hidden" }}>
           <MuiThemeProvider theme={this.getTheme()}>
             <Navbar onToggleMenu={this.onToggleMenu}
               onToggleLight={this.onToggleLight}
