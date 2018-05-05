@@ -4,7 +4,6 @@ import { withStyles } from "material-ui/styles";
 import Card, { CardContent, CardMedia } from "material-ui/Card";
 import Tabs, { Tab } from "material-ui/Tabs";
 
-import About from "./About";
 import Personal from "./Personal";
 import Skills from "./Skills";
 
@@ -36,8 +35,6 @@ class Profile extends Component {
   getTabContent() {
     switch (this.state.tabSelected){
     case 0:
-      return <About/>;
-    case 1:
       return <Personal/>;
     default:
       return <Skills/>;
@@ -66,7 +63,6 @@ class Profile extends Component {
               <Tabs value={this.state.tabSelected}
                 textColor="primary"
                 onChange={this.onTabChange}  fullWidth centered>
-                <Tab label="Acerca de mi" />
                 <Tab label="Personal" />
                 <Tab label="Habilidades" />
               </Tabs>
