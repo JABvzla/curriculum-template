@@ -16,6 +16,11 @@ const work = {
   bgColor: "#feff57"
 };
 
+const game = {
+  icon: "videogame_asset",
+  color: "#ff403a",
+  bgColor: "#8cf5ff"
+};
 
 /**
  * Provide info to use in timeLine
@@ -23,9 +28,10 @@ const work = {
 const TimeLineInfo = [
   {
     date: "2018 - Presente",
-    title: "MagicCamp / Magic Fitness",
-    subtitle: "",
-    description: "",
+    title: "Magic Camp / Magic Fitness",
+    subtitle: "Desarrollador fullstack & Desarrollador mobile.",
+    description:"Desarrollo y mantenimiento.",
+    tecnologies: ["Java","Spring","JavaScript","NodeJs","React","React-Native","JSS","PosgreSql","Docker","SCRUM"],
     icon: work.icon,
     color: work.color,
     bgColor: work.bgColor
@@ -33,26 +39,41 @@ const TimeLineInfo = [
   {
     date: "2016 - 2017",
     title: "Zedplan",
-    subtitle: "",
-    description: "",
+    subtitle: "Desarrollador fullstack.",
+    description: "Elaboracion y mantenimiento de proyectos.",
+    tecnologies: ["PHP","Laravel","OpenCore","JavaScript","Jquery","SASS","Bootstrap","Docker","MySql","PosgreSql","SCRUM"],
     icon: work.icon,
     color: work.color,
     bgColor: work.bgColor
   },
   {
-    date: "2013 - 2015",
-    title: "Freelancer",
-    subtitle: "",
-    description: "",
-    icon: work.icon,
-    color: work.color,
-    bgColor: work.bgColor
+    date: "Julio 2015",
+    title: "Venezuela Duel Jam!",
+    subtitle: "Participacion en gamejam de 48 horas.",
+    description: "Posicion #5 lugar",
+    link: "https://itch.io/jam/venezuela-duel-jam/rate/31651",
+    tecnologies: ["Java","LibGdx"],
+    icon: game.icon,
+    color: game.color,
+    bgColor: game.bgColor
   },
+  // {
+  //   date: "2013 - 2015",
+  //   title: "Freelancer",
+  //   subtitle: "",
+  //   description: "",
+  //   tecnologies: [],
+  //   icon: work.icon,
+  //   color: work.color,
+  //   bgColor: work.bgColor
+  // },
   {
     date: "2014",
     title: "Curso Android",
     subtitle: "",
     description: "Benllisoft Curso de programación en Android.",
+    link: "http://www.benllisoft.com/",
+    tecnologies: ["Java"],
     icon: academy.icon,
     color: academy.color,
     bgColor: academy.bgColor
@@ -62,24 +83,27 @@ const TimeLineInfo = [
     title: "TSU Informatica",
     subtitle: "",
     description: "Instituto Universitario Jose Maria Carreño Mencion Informatica.",
+    tecnologies: [],
     icon: school.icon,
     color: school.color,
     bgColor: school.bgColor
   },
   {
     date: "2011",
-    title: "Taller",
-    subtitle: "",
-    description: "Herramientas para la Solución de Conflictos",
+    title: "Herramientas para la Solución de Conflictos",
+    subtitle: "Taller",
+    description: "Presenciado en Instituto Universitario Jose Maria Carreño.",
+    tecnologies: [],
     icon: academy.icon,
     color: academy.color,
     bgColor: academy.bgColor
   },
   {
     date: "2011",
-    title: "Taller",
-    subtitle: "",
-    description: "Los Delitos Informaticos",
+    title: "Los Delitos Informaticos",
+    subtitle: "Taller",
+    description: "Presenciado en Instituto Universitario Jose Maria Carreño.",
+    tecnologies: [],
     icon: academy.icon,
     color: academy.color,
     bgColor: academy.bgColor
@@ -89,6 +113,7 @@ const TimeLineInfo = [
     title: "Bachiller en Ciencias",
     subtitle: "",
     description: "U.E. Santos Luzardo",
+    tecnologies: [],
     icon: school.icon,
     color: school.color,
     bgColor: school.bgColor

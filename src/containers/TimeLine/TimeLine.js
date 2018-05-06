@@ -4,6 +4,7 @@ import { TimeLineInfo } from "./TimeLineInfo";
 import "./style.min.css";
 import Typography from "material-ui/Typography";
 import Icon from "material-ui/Icon";
+import Chip from "material-ui/Chip";
 
 /**
  * write component description..
@@ -18,11 +19,7 @@ class TimeLine extends Component {
    */
   render() {
     return (
-      <div style={{
-        maxHeight: "100%",
-        maxWidth: "100%",
-        overflow: "hidden"
-      }}>
+      <div>
         <VerticalTimeline>
           {TimeLineInfo.map((element,key) =>
             <VerticalTimelineElement
@@ -31,10 +28,16 @@ class TimeLine extends Component {
               iconStyle={{ backgroundColor: element.bgColor, display: "flex"}}
               icon={<Icon color="primary" style={{ margin: "auto", color: element.color}}>{element.icon}</Icon>}
             >
-              <Typography  variant="title" gutterBottom >{element.title}</Typography>
-              <Typography  variant="subheading" gutterBottom >{element.subtitle}</Typography>
-              <Typography variant="body1" gutterBottom align="justify">
+              <Typography variant="title" gutterBottom >{element.title}</Typography>
+              <Typography><b>{element.subtitle}</b></Typography>
+              <Typography align="justify">
                 {element.description}
+                <br/>
+                {element.link? <a href={element.link} target="_blank">{element.link}</a>: null}
+                <br/>
+                {element.tecnologies.map((value,k)=>
+                  <Chip label={value} key={k}/>
+                )}
               </Typography>
             </VerticalTimelineElement>
           )}

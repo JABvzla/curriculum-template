@@ -123,6 +123,13 @@ class App extends Component {
               backgroundColor: secondary,
             },
           }
+        },
+        MuiChip:{
+          root:{
+            margin: 5,
+            backgroundColor: color2,
+            color: "#fff"
+          }
         }
       }
     });

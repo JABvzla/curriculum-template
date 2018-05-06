@@ -1,13 +1,9 @@
 ##List of `To Do`!
 
 ####Home
-    -Take Better picture.
-####Profile
-    - Update Info: Add about.
-    - Text to About
-    - Fix image responsive
+    -Update this section or take Better picture.
 ####TimeLine:
-    -Update Info: Add description.
+    -Update Info: Freelancer section.
 ###Notes
 ```
 :( u know what i mean
