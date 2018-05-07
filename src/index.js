@@ -6,32 +6,18 @@ import "typeface-roboto";
 // Bool to verify if window.onload is called.
 let windowLoaded = false;
 
-// Bool to verify if the home image is loaded.
-let homeImageLoaded = false;
 // Bool to verify if the about image is loaded.
 let aboutImageLoaded = false;
 
-// Create an instance of the home image.
-let homeImage = new Image();
 // Create an instance of the about image.
 let aboutImage = new Image();
 
-// Load the home image.
-homeImage.src = "home2.jpg";
 // Load the about image.
-aboutImage.src = "profilepic.jpeg";
+aboutImage.src = "images/profilepic.jpeg";
 
 // Remove scrollbar while site is loading.
 document.getElementsByTagName("body")[0].classList.add("not-scroll");
 document.getElementsByTagName("html")[0].classList.add("not-scroll");
-
-/**
- * The onload callback is triggered when home image is loaded.
- */
-homeImage.onload = () => {
-  homeImageLoaded = true;
-  preloaderEnd();
-};
 
 /**
  * The onload callback is triggered when about image is loaded.
@@ -56,7 +42,7 @@ window.onload = () => {
  * Home picture should be loaded.
  */
 function preloaderEnd() {
-  if(homeImageLoaded && aboutImageLoaded && windowLoaded){
+  if(aboutImageLoaded && windowLoaded){
     document.getElementsByTagName("html")[0].classList.remove("not-scroll");
     document.getElementsByTagName("body")[0].classList.remove("not-scroll");
     document.getElementById("preloader").classList.add("fadeOut");

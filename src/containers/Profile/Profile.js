@@ -56,7 +56,7 @@ class Profile extends Component {
           <CardContent className={classes.content}>
             <CardMedia
               className={classes.picture}
-              image="/profilepic.jpeg"
+              image="/images/profilepic.jpeg"
               title="Jose Bonito"
             />
             <div>

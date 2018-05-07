@@ -30,7 +30,7 @@ class App extends Component {
       "open" : props.width !== "sm",
       "showMain" :  true,
       "navigate" : false,
-      "light" : true,
+      "light" : false,
     };
 
     this.history = createHistory();
