@@ -129,7 +129,6 @@ const styles = theme => ({
   list: {
     padding: 0,
     [theme.breakpoints.down("xs")]: {
-      width: "100%",
       display: "flex",
       justifyContent: "center"
 

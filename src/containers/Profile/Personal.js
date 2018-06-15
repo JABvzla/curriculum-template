@@ -28,8 +28,8 @@ class Personal extends Component {
           <ul className={classes.listInfo}>
             <li className={classes.info}>
               <Icon className={classes.icon} >description</Icon>
-              <b>Nombre :</b>
-              José Bonito</li>
+              <b>Nombre :</b> José Bonito
+            </li>
             <li className={classes.info}>
               <Icon className={classes.icon} >email</Icon>
               <b>Email : </b>
@@ -56,9 +56,13 @@ Personal.propTypes = {
   classes: PropTypes.object
 };
 
-const styles = () => ({
+const styles = theme => ({
   column: {
     display: "flex",
+    flexDirection: "column",
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "row"
+    },
     justifyContent: "space-around",
     paddingLeft: 30,
     paddingRight: 30,
@@ -66,10 +70,10 @@ const styles = () => ({
   listInfo: {
     listStyleType: "none",
     paddingLeft: 10,
+    margin: 0,
   },
   info: {
     marginTop:20,
-    fontSize: "1.3em"
   },
   icon: {
     position: "relative",

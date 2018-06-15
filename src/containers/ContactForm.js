@@ -158,7 +158,7 @@ ContactForm.propTypes = {
   classes: PropTypes.object
 };
 
-const styles = () => ({
+const styles = theme => ({
   main: {
     display: "flex",
     minWidth: "100%",
@@ -167,8 +167,10 @@ const styles = () => ({
   card: {
     margin: "auto",
     position:"relative",
-    minWidth: 500,
-    maxWidth: 600
+    maxWidth: 600,
+    [theme.breakpoints.up("sm")]: {
+      minWidth: 500,
+    },
   },
   form: {
     display: "flex",

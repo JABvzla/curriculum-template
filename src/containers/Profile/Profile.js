@@ -41,7 +41,6 @@ class Profile extends Component {
     }
   }
 
-
   /**
    * Renders the view.
    *
@@ -55,6 +54,7 @@ class Profile extends Component {
         <Card className={classes.card}>
           <CardContent className={classes.content}>
             <CardMedia
+              ref={this.refPicture}
               className={classes.picture}
               image="/images/profilepic.jpeg"
               title="Jose Bonito"
@@ -88,8 +88,8 @@ const styles = theme => ({
   card: {
     margin: "auto",
     minHeight: 500,
-    minWidth: 544,
     marginBottom: 30,
+    maxWidth: "90%",
     [theme.breakpoints.up("md")]: {
       minWidth: "90%",
       maxWidth: "90%",
@@ -106,7 +106,7 @@ const styles = theme => ({
     backgroundColor: "#ffa100"
   },
   picture: {
-    minHeight: 310,
+    minHeight: "45vw",
 
   },
 

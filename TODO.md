@@ -1,7 +1,5 @@
 ##List of `To Do`!
-
-####Home
-    -Update this section or take Better picture.
+    -favicon!
 ####TimeLine:
     -Update Info: Freelancer section.
 ###Notes
