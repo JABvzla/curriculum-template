@@ -1,4 +1,5 @@
 # Curriculum Template
+[![Build Status](https://travis-ci.org/JABvzla/curriculum-template.svg?branch=master)](https://travis-ci.org/JABvzla/curriculum-template)
 
 This template was created for my site https://josebonito.com
 
