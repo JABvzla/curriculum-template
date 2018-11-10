@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import {withStyles} from "material-ui/styles/index";
+import { withStyles } from "@material-ui/core/styles";
 
 class SkillBar extends Component {
 

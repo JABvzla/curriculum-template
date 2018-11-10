@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 import { VerticalTimeline, VerticalTimelineElement }  from "react-vertical-timeline-component";
 import { TimeLineInfo } from "./TimeLineInfo";
 import "./style.min.css";
-import Typography from "material-ui/Typography";
-import Icon from "material-ui/Icon";
-import Chip from "material-ui/Chip";
-import { withStyles } from "material-ui/styles";
+import {
+  Icon,
+  Chip,
+  Typography,
+} from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
 
 /*
  * write component description..

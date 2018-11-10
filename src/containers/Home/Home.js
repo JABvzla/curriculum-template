@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles/index";
-import Typography from "material-ui/Typography";
+import { withStyles } from "@material-ui/core/styles";
+import { Typography } from "@material-ui/core";
 import Typist from "react-typist";
 import TypistLoop from "react-typist-loop";
 import { withRouter } from "react-router";

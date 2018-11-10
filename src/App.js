@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Router, Route } from "react-router-dom";
-import { withStyles } from "material-ui/styles/index";
-import { createMuiTheme, MuiThemeProvider } from "material-ui/styles";
+import { withStyles, createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
+import withWidth from "@material-ui/core/withWidth";
 import classNames from "classnames";
 import MenuRoutes from "./MenuRoutes";
 import { Animated } from "react-animated-css";
@@ -11,7 +11,6 @@ import { compose } from "recompose";
 
 // Import Components
 import Navbar from "./components/Navbar";
-import withWidth from "material-ui/utils/withWidth";
 
 /*
  * Component main from application.
