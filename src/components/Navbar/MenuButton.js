@@ -7,30 +7,24 @@ import { compose } from "recompose";
 import { withRouter } from "react-router";
 import { withTheme } from "material-ui/styles";
 
-/**
+/*
  * Menu button to show in NavBar menu.
  */
 class MenuButton extends Component {
-
   constructor(props) {
     super(props);
     this.state = { "isHover" : false};
   }
 
-  /**
+  /*
    * Redirect to route property.
-   * <br/>
+   *
    * Event click on menu button.
    */
   onClickButton() {
     this.props.history.push(this.props.route);
   }
 
-  /**
-   * Renders the view.
-   *
-   * @returns {XML} The view to render, never null.
-   */
   render() {
     const { text, icon, showText } = this.props;
 

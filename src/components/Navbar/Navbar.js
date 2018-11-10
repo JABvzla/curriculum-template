@@ -12,16 +12,10 @@ import IconButton from "material-ui/IconButton";
 import Icon from "material-ui/Icon";
 import MenuRoutes from "../../MenuRoutes";
 
-/**
+/*
  * Lateral Navbar component.
  */
 class Navbar extends Component {
-
-  /**
-   * Renders the view.
-   *
-   * @returns {XML} The view to render, never null.
-   */
   render() {
     const { classes, open, onToggleMenu, onToggleLight, width, location} = this.props;
     const xs = (width === "xs");

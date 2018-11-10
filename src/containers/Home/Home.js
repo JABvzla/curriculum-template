@@ -7,11 +7,10 @@ import TypistLoop from "react-typist-loop";
 import { withRouter } from "react-router";
 import "./particles.css";
 
-/**
+/*
  * Component to show on home url "/".
  */
 class Home extends Component {
-
   constructor(props) {
     super(props);
     this.toContactForm = this.toContactForm.bind(this);

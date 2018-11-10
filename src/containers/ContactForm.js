@@ -8,17 +8,11 @@ import Card, { CardHeader, CardContent } from "material-ui/Card";
 import TextField from "material-ui/TextField";
 import Button from "material-ui/Button";
 
-/**
+/*
  * Form to send contact email.
  * 
  */
 class ContactForm extends Component {
-
-  /**
-   * Constructor with mandatory parameters.
-   *
-   * @param Object The initial properties of the component, cannot be null.
-   */
   constructor(props) {
     super(props);
 
@@ -36,7 +30,7 @@ class ContactForm extends Component {
     this.onMessageChange = this.onMessageChange.bind(this);
   }
 
-  /**
+  /*
    * Send contact form via email.
    */
   sendContactEmail() {
@@ -78,7 +72,7 @@ class ContactForm extends Component {
         }));
   }
 
-  /**
+  /*
    * On Name change event.
    */
   onNameChange(e) {
@@ -88,7 +82,7 @@ class ContactForm extends Component {
     this.setState({name: str, validName: valation });
   }
   
-  /**
+  /*
    * On Email change event.
    */
   onEmailChange(e) {
@@ -96,7 +90,7 @@ class ContactForm extends Component {
     this.setState({email: str, validEmail: validator.isEmail(str)});
   }
   
-  /**
+  /*
    * On Message change event.
    */
   onMessageChange(e) {
@@ -104,11 +98,6 @@ class ContactForm extends Component {
     this.setState({message: str});
   }
 
-  /**
-   * Renders the view.
-   *
-   * @returns {XML} The view to render, never null.
-   */
   render() {
     const { classes } = this.props;
 

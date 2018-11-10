@@ -13,16 +13,10 @@ import { compose } from "recompose";
 import Navbar from "./components/Navbar";
 import withWidth from "material-ui/utils/withWidth";
 
-/**
+/*
  * Component main from application.
  */
 class App extends Component {
-
-  /**
-   * Constructor with mandatory parameters.
-   *
-   * @param Object The initial properties of the component, cannot be null.
-   */
   constructor(props) {
     super(props);
 
@@ -38,16 +32,17 @@ class App extends Component {
     this.onToggleLight = this.onToggleLight.bind(this);
     this.onNavigate();
   }
-  /**
+
+  /*
    * Toggle size of menu.
    */
   onToggleMenu() {
     this.setState({ "open": !this.state.open });
   }
 
-  /**
+  /*
    * Event trigger when url is change.
-   * <br/>
+   *
    * First block navigate to animate, then push url.
    */
   onNavigate() {
@@ -66,7 +61,7 @@ class App extends Component {
     });
   }
 
-  /**
+  /*
    * Create and return MuiTheme.
    *
    * @returns {Theme} using on app.
@@ -78,7 +73,6 @@ class App extends Component {
     const primaryInvert = !this.state.light? color1 : color2;
 
     const secondary = "#ffa100";
-    // const secondaryAlpha = "rgba(255,150,0,.2)";
 
     return createMuiTheme({
       palette: {
@@ -134,17 +128,13 @@ class App extends Component {
     });
   }
 
-  /**
+  /*
    * Toggle light or dark pallete.
    */
   onToggleLight() {
     this.setState({"light": !this.state.light});
   }
 
-  /**
-   * Renders the view.
-   * @returns {XML} The view to render, never null.
-   */
   render() {
     const { classes } = this.props;
 

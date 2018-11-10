@@ -39,6 +39,7 @@ module.exports = {
             "error",
             { "max": 1, "maxEOF": 1 }
         ],
+        "valid-jsdoc": 2,
         "jsx-uses-react": true,
         "jsx-uses-vars ": true
     }

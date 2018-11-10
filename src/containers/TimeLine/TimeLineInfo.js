@@ -22,7 +22,7 @@ const game = {
   bgColor: "#8cf5ff"
 };
 
-/**
+/*
  * Provide info to use in timeLine
  */
 const TimeLineInfo = [
