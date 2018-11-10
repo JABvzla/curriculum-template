@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles";
-import Card, { CardContent, CardMedia } from "material-ui/Card";
-import Tabs, { Tab } from "material-ui/Tabs";
+import { withStyles } from "@material-ui/core/styles";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Tab,
+  Tabs
+} from "@material-ui/core";
 
 import Personal from "./Personal";
 import Skills from "./Skills";

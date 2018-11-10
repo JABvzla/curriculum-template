@@ -3,10 +3,14 @@ import * as emailjs from "emailjs-com";
 import validator from "validator";
 import swal from "sweetalert";
 import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles";
-import Card, { CardHeader, CardContent } from "material-ui/Card";
-import TextField from "material-ui/TextField";
-import Button from "material-ui/Button";
+import { withStyles } from "@material-ui/core/styles";
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  TextField,
+  Button,
+} from "@material-ui/core";
 
 /*
  * Form to send contact email.

@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { ListItem, ListItemText } from "material-ui/List";
-import Divider from "material-ui/Divider";
-import Icon from "material-ui/Icon";
 import { compose } from "recompose";
 import { withRouter } from "react-router";
-import { withTheme } from "material-ui/styles";
+import { withTheme } from "@material-ui/core/styles";
+import {
+  ListItem,
+  ListItemText,
+  Divider,
+  Icon
+} from "@material-ui/core";
 
 /*
  * Menu button to show in NavBar menu.

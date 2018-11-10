@@ -1,16 +1,20 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles";
-import withWidth from "material-ui/utils/withWidth";
+import { withStyles } from "@material-ui/core/styles";
+import withWidth from "@material-ui/core/withWidth";
 import { compose } from "recompose";
 import classNames from "classnames";
-import Drawer from "material-ui/Drawer";
-import Card, { CardContent, CardActions } from "material-ui/Card";
-import MenuButton from "./MenuButton";
-import List from "material-ui/List";
-import IconButton from "material-ui/IconButton";
-import Icon from "material-ui/Icon";
 import MenuRoutes from "../../MenuRoutes";
+import MenuButton from "./MenuButton";
+import { 
+  Drawer,
+  Card,
+  CardContent,
+  CardActions,
+  List,
+  Icon,
+  IconButton,
+} from "@material-ui/core";
 
 /*
  * Lateral Navbar component.
