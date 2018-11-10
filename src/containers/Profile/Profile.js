@@ -7,11 +7,10 @@ import Tabs, { Tab } from "material-ui/Tabs";
 import Personal from "./Personal";
 import Skills from "./Skills";
 
-/**
+/*
  * Component to show Profile information.
  */
 class Profile extends Component {
-
   constructor(props) {
     super(props);
 
@@ -26,7 +25,7 @@ class Profile extends Component {
     this.setState({ tabSelected: value });
   }
 
-  /**
+  /*
    * Show tab section selected.
    *
    * @returns {XML} The tab section selected to render, never null.
@@ -40,11 +39,6 @@ class Profile extends Component {
     }
   }
 
-  /**
-   * Renders the view.
-   *
-   * @returns {XML} The view to render, never null.
-   */
   render() {
     const { classes } = this.props;
 

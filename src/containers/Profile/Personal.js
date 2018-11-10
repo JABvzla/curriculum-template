@@ -4,16 +4,10 @@ import {withStyles} from "material-ui/styles/index";
 import TabContent from "./TabContent";
 import Icon from "material-ui/Icon";
 
-/**
+/*
  * Component to show tab Personal content.
  */
 class Personal extends Component {
-
-  /**
-   * Renders the view.
-   *
-   * @returns {XML} The view to render, never null.
-   */
   render() {
     const { classes } = this.props;
     let age = 1969 - new Date( new Date(1992,7,20).getTime()- Date.now()).getUTCFullYear();

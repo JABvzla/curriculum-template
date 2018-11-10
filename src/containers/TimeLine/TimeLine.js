@@ -8,17 +8,11 @@ import Icon from "material-ui/Icon";
 import Chip from "material-ui/Chip";
 import { withStyles } from "material-ui/styles";
 
-/**
+/*
  * write component description..
  * 
  */
 class TimeLine extends Component {
-
-  /**
-   * Renders the view.
-   *
-   * @returns {XML} The view to render, never null.
-   */
   render() {
     return (
       <div className={this.props.classes.timeline}>

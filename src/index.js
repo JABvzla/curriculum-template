@@ -19,7 +19,7 @@ aboutImage.src = "images/profilepic.jpeg";
 document.getElementsByTagName("body")[0].classList.add("not-scroll");
 document.getElementsByTagName("html")[0].classList.add("not-scroll");
 
-/**
+/*
  * The onload callback is triggered when about image is loaded.
  */
 aboutImage.onload = () => {
@@ -27,7 +27,7 @@ aboutImage.onload = () => {
   preloaderEnd();
 };
 
-/**
+/*
  * Set preloader end when site is loaded.
  * Min time to set is 2 second.
  */
@@ -36,9 +36,9 @@ window.onload = () => {
   preloaderEnd();
 };
 
-/**
+/*
  * Hide preload when site is loaded.
- * <br/>
+ *
  * Home picture should be loaded.
  */
 function preloaderEnd() {

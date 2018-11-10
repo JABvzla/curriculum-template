@@ -3,16 +3,10 @@ import PropTypes from "prop-types";
 import Typography from "material-ui/Typography";
 import {withStyles} from "material-ui/styles/index";
 
-/**
+/*
  * Component to show Tab Content.
  */
 class TabContent extends Component {
-
-  /**
-   * Renders the view.
-   *
-   * @returns {XML} The view to render, never null.
-   */
   render() {
     const { classes, title, children } = this.props;
 
