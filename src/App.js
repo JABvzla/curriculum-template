@@ -45,7 +45,6 @@ class App extends Component {
     this.setState({ "open": !this.state.open });
   }
 
-
   /**
    * Event trigger when url is change.
    * <br/>
@@ -148,7 +147,6 @@ class App extends Component {
    */
   render() {
     const { classes } = this.props;
-
 
     return (
       <Router history={this.history}>

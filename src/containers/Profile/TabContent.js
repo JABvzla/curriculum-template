@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Typography from "material-ui/Typography";
 import {withStyles} from "material-ui/styles/index";
 
-
 /**
  * Component to show Tab Content.
  */
@@ -50,7 +49,6 @@ const styles = () => ({
   tabContent: {
     padding: 20
   },
-
 
 });
 

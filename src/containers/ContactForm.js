@@ -48,7 +48,6 @@ class ContactForm extends Component {
       closeOnEsc: false
     };
 
-
     let email = {
       "user" : "user_HfeTLLvjvvDBIwDzhhBKD",
       "service" : "josebonito_com",
@@ -60,8 +59,6 @@ class ContactForm extends Component {
         "message": this.state.message
       }
     };
-
-
 
     swal("Enviando tu informacion de contacto",modalOption)
       .then(emailjs.send(email.service, email.template, email.data, email.user)
@@ -106,7 +103,6 @@ class ContactForm extends Component {
     let str = e.target.value;
     this.setState({message: str});
   }
-
 
   /**
    * Renders the view.
