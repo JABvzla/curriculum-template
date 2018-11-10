@@ -12,12 +12,10 @@ import IconButton from "material-ui/IconButton";
 import Icon from "material-ui/Icon";
 import MenuRoutes from "../../MenuRoutes";
 
-
 /**
  * Lateral Navbar component.
  */
 class Navbar extends Component {
-
 
   /**
    * Renders the view.
@@ -135,6 +133,5 @@ const styles = theme => ({
     },
   }
 });
-
 
 export default compose(withStyles(styles), withWidth())(Navbar);

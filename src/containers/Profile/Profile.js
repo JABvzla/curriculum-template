@@ -26,7 +26,6 @@ class Profile extends Component {
     this.setState({ tabSelected: value });
   }
 
-
   /**
    * Show tab section selected.
    *
@@ -111,6 +110,5 @@ const styles = theme => ({
   },
 
 });
-
 
 export default withStyles(styles)(Profile);

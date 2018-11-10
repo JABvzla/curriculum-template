@@ -26,7 +26,6 @@ class MenuButton extends Component {
     this.props.history.push(this.props.route);
   }
 
-
   /**
    * Renders the view.
    *
@@ -70,6 +69,5 @@ MenuButton.propTypes = {
   history: PropTypes.object.isRequired,
   active: PropTypes.bool
 };
-
 
 export default compose(withTheme())(withRouter(MenuButton) );

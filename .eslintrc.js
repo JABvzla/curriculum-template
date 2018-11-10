@@ -31,6 +31,14 @@ module.exports = {
             "error",
             "always"
         ],
+        "eol-last": [
+            "error",
+            "always"
+        ],
+        "no-multiple-empty-lines": [
+            "error",
+            { "max": 1, "maxEOF": 1 }
+        ],
         "jsx-uses-react": true,
         "jsx-uses-vars ": true
     }
