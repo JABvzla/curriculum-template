@@ -35,10 +35,6 @@ class Home extends Component {
                 <span>Frontend Developer.</span>
                 <Typist.Backspace count={23} delay={1000} />
               </Typist>
-              <Typist>
-                <span>Backend Developer.</span>
-                <Typist.Backspace count={23} delay={1000} />
-              </Typist>
             </TypistLoop>
           </Typography>
         </div>

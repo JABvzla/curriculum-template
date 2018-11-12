@@ -62,7 +62,6 @@ class Profile extends Component {
                 textColor="primary"
                 onChange={this.onTabChange}  fullWidth centered>
                 <Tab label="Personal" />
-                <Tab label="Habilidades" />
               </Tabs>
               {this.getTabContent()}
             </div>
