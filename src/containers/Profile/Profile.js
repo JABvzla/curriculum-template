@@ -5,12 +5,9 @@ import {
   Card,
   CardContent,
   CardMedia,
-  Tab,
-  Tabs
 } from "@material-ui/core";
 
 import Personal from "./Personal";
-import Skills from "./Skills";
 
 /*
  * Component to show Profile information.
@@ -30,20 +27,6 @@ class Profile extends Component {
     this.setState({ tabSelected: value });
   }
 
-  /*
-   * Show tab section selected.
-   *
-   * @returns {XML} The tab section selected to render, never null.
-   */
-  getTabContent() {
-    switch (this.state.tabSelected){
-    case 0:
-      return <Personal/>;
-    default:
-      return <Skills/>;
-    }
-  }
-
   render() {
     const { classes } = this.props;
 
@@ -57,15 +40,7 @@ class Profile extends Component {
               image="/images/profilepic.jpeg"
               title="Jose Bonito"
             />
-            <div>
-              <Tabs value={this.state.tabSelected}
-                textColor="primary"
-                onChange={this.onTabChange}  fullWidth centered>
-                <Tab label="Personal" />
-                <Tab label="Habilidades" />
-              </Tabs>
-              {this.getTabContent()}
-            </div>
+            <Personal/>
           </CardContent>
         </Card>
       </div>
