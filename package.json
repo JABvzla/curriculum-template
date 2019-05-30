@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "lint": "yarn eslint ./src/",
     "deploy": "react-scripts build && firebase deploy --only hosting",
     "test": "react-scripts test --env=jsdom",
