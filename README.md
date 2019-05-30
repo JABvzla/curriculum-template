@@ -1,6 +1,8 @@
 # Curriculum Template
 [![Build Status](https://travis-ci.org/JABvzla/curriculum-template.svg?branch=master)](https://travis-ci.org/JABvzla/curriculum-template)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6244200e-dd12-44f3-83a6-1bf12f40474e/deploy-status)](https://app.netlify.com/sites/josebonito/deploys)
+
 This template was created for my site https://josebonito.com
 
 
