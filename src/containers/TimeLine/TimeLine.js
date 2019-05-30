@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { VerticalTimeline, VerticalTimelineElement }  from "react-vertical-timeline-component";
 import { TimeLineInfo } from "./TimeLineInfo";
-import "./style.min.css";
+import "react-vertical-timeline-component/style.min.css";
 import {
   Icon,
   Chip,
@@ -31,7 +31,7 @@ class TimeLine extends Component {
               <Typography align="justify">
                 {element.description}
                 <br/>
-                {element.link? <a href={element.link} target="_blank">{element.link}</a>: null}
+                {element.link? <a href={element.link} target="_blank" rel="noopener noreferrer">{element.link}</a>: null}
                 <br/>
                 {element.tecnologies.map((value,k)=>
                   <Chip label={value} key={k}/>
