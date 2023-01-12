@@ -27,7 +27,57 @@ const game = {
  */
 const TimeLineInfo = [
   {
-    date: "2018 - Presente",
+    date: "2021 - 2023",
+    title: "Frubana",
+    subtitle: "React-Native Developer",
+    description:"Desarrollo de App Mobile.",
+    tecnologies: ["React-Native", "Jest"],
+    icon: work.icon,
+    color: work.color,
+    bgColor: work.bgColor
+  },
+  {
+    date: "2021 - 2021",
+    title: "Fravega",
+    subtitle: "Desarrollador fullstack.",
+    description:"Desarrollo fullstack",
+    tecnologies: ["nestjs", "nodejs","docker","react", "next", "graphql","typescript"],
+    icon: work.icon,
+    color: work.color,
+    bgColor: work.bgColor
+  },
+  {
+    date: "2020 - 2020",
+    title: "Sinapsis",
+    subtitle: "Frontend Developer",
+    description:"Desarrollo frontend web.",
+    tecnologies: ["react", "next", "graphql","typescript"],
+    icon: work.icon,
+    color: work.color,
+    bgColor: work.bgColor
+  },
+  {
+    date: "2020 - 2020",
+    title: "Ripio",
+    subtitle: "React-Native Developer",
+    description:"Desarrollo de App Mobile.",
+    tecnologies: ["React-Native", "Jest"],
+    icon: work.icon,
+    color: work.color,
+    bgColor: work.bgColor
+  },
+  {
+    date: "2019 - 2020",
+    title: "123 Seguro",
+    subtitle: "Software Developer Team Lead",
+    description:"Desarrollo, organización de tareas y delegación de responsabilidades.",
+    tecnologies: ["Laravel","NodeJs", "React","Docker","PHP", "GO", "SCRUM", "KANBAN"],
+    icon: work.icon,
+    color: work.color,
+    bgColor: work.bgColor
+  },
+  {
+    date: "2018 - 2019",
     title: "Magic Camp / Magic Fitness",
     subtitle: "Desarrollador fullstack & Desarrollador mobile.",
     description:"Desarrollo y mantenimiento.",
