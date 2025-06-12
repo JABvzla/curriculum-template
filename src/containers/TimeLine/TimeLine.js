@@ -27,9 +27,10 @@ class TimeLine extends Component {
               icon={<Icon color="primary" style={{ margin: "auto", color: element.color}}>{element.icon}</Icon>}
             >
               <Typography variant="title" gutterBottom >{element.title}</Typography>
-              <Typography><b>{element.subtitle}</b></Typography>
-              <Typography align="justify">
-                {element.description}
+              <Typography variant="subtitle"><b>{element.subtitle}</b></Typography>
+              <Typography variant="body" align="justify">
+                <br/>
+                  {element.description}
                 <br/>
                 {element.link? <a href={element.link} target="_blank" rel="noopener noreferrer">{element.link}</a>: null}
                 <br/>
